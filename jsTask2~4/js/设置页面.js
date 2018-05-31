@@ -88,8 +88,8 @@ function sendingCard() {
     if (wolvesKill.length!==0){
         // sessionStorage.setItem("key", "value");
         sessionStorage.setItem("playerIdentify",JSON.stringify(wolvesKill));
-        sessionStorage.setItem("playerNums","inputNum");
-        window.location.href = "./next.html";
+        sessionStorage.setItem("playerNums",inputNum.value);
+        window.location.href = "./翻牌页面.html";
     }
     else {
         alert("请分配玩家身份")
