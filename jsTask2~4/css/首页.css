@@ -3,31 +3,44 @@
     padding: 0;
     list-style: none;
 }
+
 html {
     font-size: 100px;
     background-color: #f0f0f0;
 }
+
+
 /* 头部布局 */
+
 header {
     padding: .11rem .15rem;
     background-color: #29bde0;
 }
+
+
 /* 头部左侧小边框 */
+
 .return-menu {
     border-top: .02rem solid #fff;
     border-bottom: .02rem solid #fff;
-    padding: .04rem 0;   
+    padding: .04rem 0;
     width: .17rem;
-    height: .14rem;    
+    height: .14rem;
     background: #fff;
-    background-clip: content-box;    
+    background-clip: content-box;
 }
+
+
 /* 主体部分 */
+
 main {
     padding: .13rem .18rem 0 .18rem;
     background: #eeefef;
 }
+
+
 /* 上次游戏 */
+
 .last-game {
     margin-bottom: .13rem;
     border: 1px solid #c9c9c9;
@@ -43,19 +56,26 @@ main {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 .last-game a {
     float: right;
-    margin: .18rem 0 0 -.12rem;    
+    margin: .18rem 0 0 -.12rem;
     width: .12rem;
     height: .2rem;
     background: url(../.././favicon.ico/task7/back-icon.png)
 }
+
+
 /* 游戏主体 */
+
 .container1 {
     border: 1px solid #d0d0d0;
     background: #fff;
 }
+
+
 /* 游戏名称 */
+
 .ghosts-game {
     border-bottom: 1px solid #fdd793;
     height: .45rem;
@@ -64,7 +84,10 @@ main {
     text-align: center;
     color: #fbb435;
 }
+
+
 /* 版本选择 */
+
 .version-selection {
     border-top: 1px solid #fde1ae;
     padding: .15rem .28rem 0 .28rem;
@@ -79,16 +102,20 @@ main {
     color: #fff;
     background-color: #69d1e9;
 }
+
 .version-selection div {
     height: .39rem;
     text-align: center;
-    color:#787878;
+    color: #787878;
     line-height: .39rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+
 /* 右侧小三角 */
+
 div.next-page {
     position: fixed;
     right: .23rem;
@@ -99,20 +126,24 @@ div.next-page {
     width: 0;
     height: 0;
 }
+
 .dot {
     display: block;
     text-align: center;
 }
-.dot i {    
+
+.dot i {
     display: inline-block;
     width: .08rem;
     height: .08rem;
     border-radius: 50%;
     background: #f0f0f0;
 }
+
 .first {
     background: #69d1e9;
 }
+
 button {
-    cursor:pointer;
+    cursor: pointer;
 }

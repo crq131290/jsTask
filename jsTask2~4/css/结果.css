@@ -3,45 +3,53 @@
     padding: 0;
     list-style: none;
 }
+
 html {
     font-size: 100px;
-    background-color: #29bde0; 
+    background-color: #29bde0;
 }
+
 header {
     position: fixed;
     top: 0;
     left: 0;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .1rem .05rem;
     width: 100%;
     background-color: #29bde0;
 }
+
 header button {
     border: none;
     outline-style: none;
 }
+
 .home-page {
     width: .26rem;
     height: .21rem;
     background: url(../.././favicon.ico/task7/home-ico.png) no-repeat;
     background-size: cover;
 }
+
 header div {
     font-size: .17rem;
     color: #fff;
 }
+
 .second-page {
     width: .26rem;
     height: .21rem;
-    background: url(../.././favicon.ico/task7/ico2.png) no-repeat ; 
+    background: url(../.././favicon.ico/task7/ico2.png) no-repeat;
 }
+
 main {
-    margin: .44rem  0 .65rem 0;
+    margin: .44rem 0 .65rem 0;
     border-top: 1px solid #74d4eb;
     background-color: #29bde0;
 }
+
 .container1 {
     display: flex;
     flex-direction: column;
@@ -49,18 +57,17 @@ main {
     align-items: center;
     margin-bottom: 0;
     padding: 0 .15rem;
-
 }
+
 .congratulate-ico {
     margin-top: .11rem;
     width: 1.76rem;
-    height: 1.03rem;    
+    height: 1.03rem;
     background: url(../.././favicon.ico/task7/congratulate-ico.png) no-repeat 0 0;
     background-size: 100% auto;
 }
 
 .congratulate {
-    
     padding: .1rem 12%;
     width: 100%;
     font-size: .17rem;
@@ -68,54 +75,70 @@ main {
     color: #ffc865;
     text-align: left;
 }
+
+
 /* 游戏信息 */
+
 .game-info {
     padding: .1rem 12%;
-    width: 100%;    
+    width: 100%;
     font-size: .13rem;
     color: #fff;
 }
-.game-info1 > li{
+
+.game-info1>li {
     line-height: 1.5;
 }
+
 .identify-info {
     overflow: hidden;
 }
+
 .game-info1 div {
     float: left;
     margin-right: .15rem;
 }
-.game-info1 div  i {
+
+.game-info1 div i {
     display: inline-block;
     width: .1rem;
     height: .1rem;
 }
-/* 游戏日志 */
-.journal {
 
+
+/* 游戏日志 */
+
+.journal {
     background-color: #fff;
 }
+
 .journal ul {
     padding: 0 .15rem;
     margin-bottom: 0;
     border-bottom: 2px solid #ddd;
 }
+
 .journal li {
     margin: 0 12% 0 12%;
     font-size: .13rem;
-    color: #d3d3d3;    
+    color: #d3d3d3;
 }
+
 .journal .date {
     font-size: .15rem;
     color: #515151;
 }
-.journal .date span{
+
+.journal .date span {
     float: right;
     margin-top: .05rem;
     font-size: .1rem;
     color: #cbcbcb;
 }
+
+
 /* 底部按钮 */
+
 footer {
     position: fixed;
     bottom: 0;
@@ -125,6 +148,7 @@ footer {
     text-align: center;
     background-color: rgba(153, 223, 240, 0.5)
 }
+
 footer button {
     width: 42%;
     height: .44rem;
@@ -132,11 +156,12 @@ footer button {
     color: #fff;
     cursor: pointer;
 }
+
 .again {
     margin-right: .25rem;
     background: #f66f6f;
 }
+
 .share {
     background: #fbb435;
 }
-

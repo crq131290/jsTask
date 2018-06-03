@@ -23,22 +23,31 @@
     <main>
         <div class="container">
             <div class="message clearfix">
-                <div class="m-left">玩 <br> 家 <br> 配 <br> 比</div>
+                <div class="m-left">玩
+                    <br> 家
+                    <br> 配
+                    <br> 比
+                </div>
                 <div class="m-right">
                     <div class="m-right-top">
                         <ul id="role-list" class="list-style row">
-                            
+
                         </ul>
                     </div>
-                    <button class="m-right-bottom" onclick="setPlayNum()"><span>点击设置<img src="./img/pencil.png" alt=""></span></button>
+                    <button class="m-right-bottom" onclick="setPlayNum()">
+                        <span>点击设置
+                            <img src="./img/pencil.png" alt="">
+                        </span>
+                    </button>
                 </div>
             </div>
             <div class="words">
-                <input type="text" placeholder="水民词组">
-                <input type="text" placeholder="幽灵词组">
+                <input id="words1" type="text" placeholder="水民词组" onchange="matchWords()">
+                <input id="words2" type="text" placeholder="幽灵词组" onchange="matchWords()">
             </div>
             <div class="player-num">
-                <div class="player-num-text">玩家人数<input type="text"  id="players" value="4" onchange="matchNum()">人</div>
+                <div class="player-num-text">玩家人数
+                    <input type="text" id="players" value="4" onchange="matchNum()">人</div>
                 <div class="num-range">
                     <button class="reduce" onclick="reduceNum()"></button>
                     <input type="range" id="slider" onchange="sliderChange()" value="4" min="4" max="18" step="1">
@@ -46,10 +55,9 @@
                 </div>
             </div>
             <button class="send-card" onclick="sendingCard()">去发牌</button>
-        </div> 
+        </div>
     </main>
     <footer></footer>
-
     <script src="./js/设置页面.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./js/bootstrap.js"></script>

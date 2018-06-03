@@ -48,43 +48,42 @@ header p {
     background-size: contain;
 }
 
-.num-box {
-    position: absolute;
-    left: 50%;
-    top: -.17rem;
-    margin: 0 auto;
-    margin-left: -.17rem;
-    border: 2px solid #ffedc6;
-    width: .35rem;
-    height: .35rem;
-    color: #f56b81;
-    background-color: #fff;
-    border-radius: 50%;
-}
-
-.flop-card-box {
-    margin: 0 auto;
-    padding: .4rem 0;
-    text-align: center;
+main {
+    padding: .32rem 0;
     background-color: #29bde0;
 }
 
-.flop-card {
-    position: relative;
-    margin: 0 auto;
+.player-box::after {
+    content: "";
+    display: table;
+    clear: both;
+    zoom: 1;
+}
+
+.player {
+    float: left;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    width: 20vw;
+    height: 20vw;
+    max-width: 1.24rem;
+    max-height: 1.24rem;
+    text-align: center;
     border: 2px solid #fff;
-    padding: .5rem 0;
-    width: 70%;
-    min-height: 3.5rem;
-    background-color: #ffedc5;
+    background-color: #29bde0;
 }
 
-.role-card-icon {
-    display: none;
+.p-top {
+    padding-top: calc(40% - .16rem);
+    height: 70%;
+    font-size: .16rem;
+    background-color: #f5c97b;
 }
 
-.role-card-icon p {
-    margin-top: .2rem;
+.p-down {
+    padding-top: calc(20% - .16rem);
+    height: 30%;
+    background-color: #83b09a;
 }
 
 footer {

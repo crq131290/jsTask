@@ -1,19 +1,25 @@
 var btn1 = document.getElementById('btn1');
 var btn2 = document.getElementById('btn2');
 var div = document.getElementsByClassName('class1');
+var c2 = document.getElementsByClassName('c2');
+console.log(c2[0])
+console.log(typeof(div));
+console.log(typeof(btn2));
+console.log(div[1])
 var set;
-btn1.onclick = function () {
+btn1.onclick = function() {
     clearInterval(set);
     set = setInterval(select, 1000);
     btn1.style.backgroundColor = "#ff7f02";
     btn2.style.backgroundColor = "#fff";
 }
-btn2.onclick = function () {
+btn2.onclick = function() {
     colorRest();
     clearInterval(set);
     btn2.style.backgroundColor = "#ff7f02";
     btn1.style.backgroundColor = "#fff";
 }
+
 function select() {
     colorRest();
     var box = [];
@@ -73,7 +79,7 @@ function colors() {
 // 	return color
 // }
 var reset = document.getElementById("reset")
-reset.onclick = function () {
+reset.onclick = function() {
     colorRest();
     clearInterval(set);
     btn1.style.backgroundColor = "#fff";
