@@ -15,8 +15,8 @@ console.log(deadMan);
 console.log(deadManNum);
 console.log(bg);
 console.log(dayTime);
-console.log(day)
-    // 更改时间
+console.log(day);
+// 更改时间
 $('.day-time').html('第' + day + '天');
 
 // 需要统计死亡人数来判断是否是新的一天
@@ -53,7 +53,6 @@ if (deadpersonNum % 2 == 0) {
 
 // 进入杀人界面
 function killerFarmer() {
-
     var dayTime = 0;
     var bg = $('.game-step1').css('backgroundColor');
     $('.game-step1').css({
@@ -128,3 +127,19 @@ $('.stop-game').on('click', function() {
         return false;
     }
 })
+$('.diary').on('click', function() {
+    window.location.href = './大法官的日记本.html'
+})
+
+// 反复查看deadManNum会有重复的数组
+// 先定义一个新的数组
+var newArr = [];
+// 遍历数组
+for (i = 0; i < deadManNum.length; i++) {
+    if (newArr.indexOf(deadManNum[i]) < 0) {
+        //判断在s数组中是否存在，不存在则push到s数组中
+        newArr.push(deadManNum[i]);
+    }
+    console.log(newArr);
+}
+sessionStorage.setItem('newArr', JSON.stringify(newArr));

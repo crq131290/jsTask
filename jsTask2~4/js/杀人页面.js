@@ -15,8 +15,6 @@ if (dayTime === 0) {
     $('.kill-farmer').html('杀死平民');
     // 杀手杀完人后就是第二天
 
-
-
 } else if (dayTime === 1) {
     $('header p').html('全民投票');
     $('.kill-farmer').html('确认投票');
@@ -125,7 +123,7 @@ var farmer = 0;
 
 $('.kill-farmer').on('click', function() {
     sessionStorage.setItem('playersifo', JSON.stringify(playersifo));
-    // 此时任务状态已经改变需要将其重新储存
+    // 此时人物状态已经改变需要将其重新储存
     for (var i = 0; i < num; i++) {
         if (playersifo[i].identify === '杀手' && playersifo[i].state === 1) {
             killer++;
@@ -136,16 +134,18 @@ $('.kill-farmer').on('click', function() {
     }
     console.log(killer);
     console.log(farmer);
+    sessionStorage.setItem('killer', JSON.stringify(killer));
+    sessionStorage.setItem('farmer', JSON.stringify(farmer));
     if (last === "abc") {
         // 此时没杀人也可进行下一步骤,需要进行判断
         alert('你确定不杀人吗');
     } else {
         if (killer === 0) {
             alert('平民胜利');
-            window.location.href = './大法官的日s志.html';
+            window.location.href = './task2结果.html';
         } else if (killer >= farmer) {
             alert('杀手胜利');
-            window.location.href = './大法官的日s志.html';
+            window.location.href = './task2结果.html';
         } else {
             window.location.href = './大法官的日志.html';
         }

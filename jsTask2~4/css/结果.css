@@ -2,46 +2,55 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    outline: none;
 }
 
 html {
     font-size: 100px;
-    background-color: #29bde0;
 }
+
+body {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+
+/* 头部部分 */
 
 header {
     position: fixed;
     top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .1rem .05rem;
     width: 100%;
+    max-width: 640px;
     background-color: #29bde0;
 }
 
-header button {
-    border: none;
-    outline-style: none;
-}
-
-.home-page {
-    width: .26rem;
-    height: .21rem;
-    background: url(../.././favicon.ico/task7/home-ico.png) no-repeat;
-    background-size: cover;
-}
-
-header div {
-    font-size: .17rem;
+header p {
+    margin-bottom: 0;
+    padding: 0.1rem;
+    font-size: 0.17rem;
+    text-align: center;
     color: #fff;
 }
 
-.second-page {
-    width: .26rem;
-    height: .21rem;
-    background: url(../.././favicon.ico/task7/ico2.png) no-repeat;
+.back-icon {
+    display: inline-block;
+    float: left;
+    margin: 0.12rem 0.1rem;
+    width: 0.12rem;
+    height: 0.2rem;
+    background: url(.././img/backIcon.png) no-repeat;
+    background-size: contain;
+}
+
+.help-icon {
+    display: inline-block;
+    float: right;
+    margin: 0.1rem 0.1rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background: url(.././img/help.png) no-repeat;
+    background-size: contain;
 }
 
 main {
@@ -59,11 +68,19 @@ main {
     padding: 0 .15rem;
 }
 
-.congratulate-ico {
+.congratulate-ico1 {
     margin-top: .11rem;
     width: 1.76rem;
     height: 1.03rem;
-    background: url(../.././favicon.ico/task7/congratulate-ico.png) no-repeat 0 0;
+    background: url(.././img/平民胜利.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+
+.congratulate-ico2 {
+    margin-top: .11rem;
+    width: 1.76rem;
+    height: 1.03rem;
+    background: url(.././img/卧底胜利.png) no-repeat 0 0;
     background-size: 100% auto;
 }
 
@@ -109,31 +126,17 @@ main {
 /* 游戏日志 */
 
 .journal {
-    background-color: #fff;
+    padding: 0 calc(12% + .12rem);
+    color: #fff;
+    background-color: #29bde0;
 }
 
-.journal ul {
-    padding: 0 .15rem;
+.journal p {
     margin-bottom: 0;
-    border-bottom: 2px solid #ddd;
 }
 
-.journal li {
-    margin: 0 12% 0 12%;
-    font-size: .13rem;
-    color: #d3d3d3;
-}
-
-.journal .date {
-    font-size: .15rem;
-    color: #515151;
-}
-
-.journal .date span {
-    float: right;
-    margin-top: .05rem;
-    font-size: .1rem;
-    color: #cbcbcb;
+.diary-journal {
+    margin: .1rem 0 0 0;
 }
 
 

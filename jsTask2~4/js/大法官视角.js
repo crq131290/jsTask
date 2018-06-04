@@ -47,6 +47,8 @@ sessionStorage.setItem('deadManNum', JSON.stringify(deadManNum));
 // 天数的重置
 var day = 1;
 sessionStorage.setItem('day', JSON.stringify(day));
+
+
 // 切换到大法官日志页面
 function nextPage() {
     window.location.href = "./大法官的日志.html"
