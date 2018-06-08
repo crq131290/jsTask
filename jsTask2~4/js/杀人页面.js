@@ -71,14 +71,7 @@ for (var i = 0; i < num; i++) {
     // 点击事件不发生的话last=abc
     // last如果内置的话, 每次都会重新声明
     players[i].onclick = function() {
-        var deadMan = []
-            // 此时的this指的是触发click事件的那个对象
-        deadMan.push(playersifo[this.index].num);
-        console.log(deadMan);
-        sessionStorage.setItem('deadMan', JSON.stringify(deadMan));
-        // deadman指的是被杀的那个人的编号
-        // 此时deadMan里面包含了最后一个点击的人
-        // 需要将deadMan传递出去
+
         if (dayTime === 0) {
             if (playersifo[this.index].state === 0 || playersifo[this.index].identify === '杀手') {
                 if (playersifo[this.index].state === 0) {
@@ -87,6 +80,15 @@ for (var i = 0; i < num; i++) {
                     alert('本是同根生,相煎何太急!!!')
                 }
             } else {
+                var deadMan = []
+                    // 此时的this指的是触发click事件的那个对象
+                deadMan.push(playersifo[this.index].num);
+                console.log(deadMan);
+                sessionStorage.setItem('deadMan', JSON.stringify(deadMan));
+                // deadman指的是被杀的那个人的编号
+                // 此时deadMan里面包含了最后一个点击的人
+                // 需要将deadMan传递出去
+
                 // 现将现在点击的人杀了
                 $(players[this.index]).css({ 'background': 'red' });
                 playersifo[this.index].state = 0;
@@ -97,12 +99,22 @@ for (var i = 0; i < num; i++) {
                 }
                 last = this.index;
                 // 将本次循环的this.index保存起来,用于下次点击时改变其状态
+
             }
         } else if (dayTime === 1) {
             if (playersifo[this.index].state === 0) {
                 alert('他已经死了!!!')
             } else {
+                var deadMan = []
+                    // 此时的this指的是触发click事件的那个对象
+                deadMan.push(playersifo[this.index].num);
+                console.log(deadMan);
+                sessionStorage.setItem('deadMan', JSON.stringify(deadMan));
+                // deadman指的是被杀的那个人的编号
+                // 此时deadMan里面包含了最后一个点击的人
+                // 需要将deadMan传递出去
                 // 现将现在点击的人杀了
+
                 $(players[this.index]).css({ 'background': 'red' });
                 playersifo[this.index].state = 0;
                 // 再将之前的目标点击的救活(任务4做完测试一下task1这种思想去改变)
