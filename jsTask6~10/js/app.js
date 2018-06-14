@@ -1,0 +1,31 @@
+// 定义模块
+var myApp = angular.module("myApp", ['ui.router', 'oc.lazyLoad']);
+// 创建路由
+myApp.config(function($stateProvider, $urlRouterProvider) {
+    // 路由的重定向
+    $urlRouterProvider.when('', '/login');
+    // 匹配补不到路由时跳转到此页面
+    // urlRouterProvider.otherwise('/login');
+    $stateProvider
+    // 整个登录页面
+        .state('login', {
+            url: '/login',
+            templateUrl: 'html/login.html',
+            controller: 'loginCtrl'
+        })
+        .state('home', {
+            url: '/home',
+            templateUrl: 'html/home.html',
+            controller: 'homeCtrl'
+        })
+        .state('home.welcoom', {
+            url: '/welcoom',
+            templateUrl: 'html/welcome.html',
+            // controller:''
+        })
+        .state('home.listpages', {
+            url: '/listpages',
+            templateUrl: 'html/listpages.html',
+            controller:'articleList'
+        })
+});
