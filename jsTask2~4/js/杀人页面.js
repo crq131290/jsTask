@@ -71,7 +71,6 @@ for (var i = 0; i < num; i++) {
     // 点击事件不发生的话last=abc
     // last如果内置的话, 每次都会重新声明
     players[i].onclick = function() {
-
         if (dayTime === 0) {
             if (playersifo[this.index].state === 0 || playersifo[this.index].identify === '杀手') {
                 if (playersifo[this.index].state === 0) {

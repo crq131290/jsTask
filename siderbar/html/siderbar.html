@@ -1,0 +1,10 @@
+<div class="panel-group col-xs-4 col-md-4">
+        <div class="panel panel-primary" ng-repeat="item in sider">
+            <div class="panel-heading" ng-click="click($index)">{{item.firstList}}</div>
+            <!-- <div ng-show="$index==focus"> -->
+            <!-- <div ng-if="$index==focus"> -->
+            <div ng-class="{dpn:$index!=focus}">
+                <div ng-repeat="x in item.secondList" class="panel-body">{{x.title}}</div>
+            </div>
+        </div>
+    </div>

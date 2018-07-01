@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <style type="text/css">
+        body {
+            margin: 20px auto;
+            max-width: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="panel panel-primary">
+        <div class="panel-heading ">
+            表单验证
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label>请输入数字</label>
+                <input type="text" class="form-control" onblur="isZm(this.value)">
+            </div>
+            <div class="form-group">
+                <label>请输入字母</label>
+                <input type="password" class="form-control" onblur="isNum(this.value)" />
+            </div>
+            <div class="form-group">
+                <label>请输入汉字</label>
+                <input type="text" class="form-control" onblur="isChinese(this.value)">
+            </div>
+            <div class="form-group">
+                <label>请输入字母和数字</label>
+                <input type="text" class="form-control" onblur="isNumZm(this.value)">
+            </div>
+            <div class="form-group">
+                <label>屏蔽关键字</label>
+                <input type="text" class="form-control" onblur="isShield(this.value)">
+            </div>
+            <div class="form-group">
+                <label>日期格式</label>
+                <input type="text" class="form-control" onblur="IsDate(this.value)">
+            </div>
+            <div class="form-group">
+                <label>时间格式</label>
+                <input type="text" class="form-control" onblur="isTime(this.value)">
+            </div>
+            <div class="form-group">
+                <label>邮箱格式</label>
+                <input type="text" class="form-control" onblur="isEmail(this.value)">
+            </div>
+            <div class="form-group">
+                <label>整数</label>
+                <input type="text" class="form-control" onblur="isInteger(this.value)">
+            </div>
+            <div class="form-group">
+                <label>数</label>
+                <input type="text" class="form-control" onblur="isNums(this.value)">
+            </div>
+        </div>
+    </form>
+</body>
+
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./js/form.js"></script>
+<script>
+
+
+</script>
+
+</html>

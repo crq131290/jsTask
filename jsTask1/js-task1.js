@@ -85,3 +85,46 @@ reset.onclick = function() {
     btn1.style.backgroundColor = "#fff";
     btn2.style.backgroundColor = "#fff";
 }
+
+
+// 回调函数实例
+// 就是插入代码
+var bb = []
+function ss(xx) {
+    var x = [];
+    for(var i=0;i<3;i++) {
+        x[i] = Math.floor(Math.random()*9)
+        
+    }
+    xx(x)
+    console.log(x)
+}
+function xx(aaa) {
+    if(aaa[0]==aaa[1]||aaa[1]==aaa[2]||aaa[0]==aaa[2]) {
+        ss(xx)
+    }
+}
+ss(xx)
+
+//生成123//456//789的方法
+for(let i=0;i<8;i=i+3){              
+    let  b=i*500
+      setTimeout(function(){ 
+          console.log("var：" + i);
+          console.log("var：" + (i+1));
+          console.log("var：" + (i+2));             
+     },b)       
+}
+//生成123//456//789的方法2
+setInterval(xxx,1000)
+var n=0;
+function xxx() {
+    for(var i=0;i<3;i++) {
+        console.log(n)
+        n++
+        if(n>9) {
+            n=0
+            xxx()
+        }
+    }        
+}

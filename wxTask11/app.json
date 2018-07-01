@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test", 
+    "pages/recommend/recommend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#47474a",
+    "navigationBarTitleText": "微信小程序设计",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "backgroundColor": "#47474a",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "selectedIconPath": "images/app/menu.png",
+        "iconPath": "images/app/menu.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/app/home.png",
+        "iconPath": "images/app/home.png",
+        "pagePath": "pages/test/test",
+        "text": "测试"
+      }
+    ]
+  }
+}
