@@ -11,8 +11,8 @@ angular
             console.log($scope.user);
 
             $http({
-                method: 'GET',
-                url: 'https://dev.admin.carrots.ptteng.com/a/login',
+                method: 'POST',
+                url: '/carrots-admin-ajax/a/login',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 // 类似原生序列化的方法,
                 // data: ('name=' +
