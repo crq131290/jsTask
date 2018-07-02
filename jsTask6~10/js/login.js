@@ -12,7 +12,7 @@ angular
 
             $http({
                 method: 'post',
-                url: '/carrots-admin-ajax/a/login',
+                url: 'http://dev.admin.carrots.ptteng.com/a/login',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 // 类似原生序列化的方法,
                 // data: ('name=' +
