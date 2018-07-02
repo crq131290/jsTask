@@ -118,7 +118,6 @@ $('.game-step4').on('click', function() {
 $('.stop-game').on('click', function() {
     if (window.confirm('你确定要结束游戏吗？')) {
         //alert("确定");
-
         window.location.href = './task2首页.html'
         return true;
         // 这个地方需要清空缓存
