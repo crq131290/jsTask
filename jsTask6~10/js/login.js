@@ -11,7 +11,7 @@ angular
             console.log($scope.user);
 
             $http({
-                method: 'post',
+                method: 'GET',
                 url: '/carrots-admin-ajax/a/login',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 // 类似原生序列化的方法,
