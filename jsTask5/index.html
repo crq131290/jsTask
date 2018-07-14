@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <meta http-equiv="Access-Control-Allow-Origin" content="*">
 
 <head>
@@ -16,21 +16,21 @@
     <link rel="stylesheet" type="text/css" href="./css/task5.css"></link>
 </head>
 
-<body>
+<body ng-controller="appCtrl">
     <header></header>
     <main>
         <div class="login-main">
             <h3>后台登录</h3>
             <div class="user">
                 <img src="./img/man.png" alt="瞬间爆炸">
-                <input type="text" class="u-input" id="account" placeholder="这里输入账号">
+                <input type="text" class="u-input" id="account" placeholder="这里输入账号" ng-model="user.name">
             </div>
             <div class="pwd">
                 <img src="./img/lock.png" alt="瞬间爆炸">
-                <input type="password" class="p-input" id="password" placeholder="这里输入密码">
+                <input type="password" class="p-input" id="password" placeholder="这里输入密码" ng-model="user.pwd">
             </div>
             <div class="tips"></div>
-            <button class="btn btn-info" id="login">登录</button>
+            <button class="btn btn-info" id="login" ng-click="click()">登录</button>
         </div>
     </main>
     <footer></footer>
@@ -38,6 +38,38 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.js"></script>
     <script src="./js/task5.js"></script>
+    <script src="./bootbox.js"></script>
+    <script>
+        bootbox.setDefaults("locale","zh_CN");
+        bootbox.prompt({
+            size: "small",
+            // animate: false,
+            title: "确定把修改该条记录状态为缴费完成?",
+            callback: function(result) {
+                if (result == true) {
+                    console.log(1111)
+                } else console.log(222)
+            }
+        });  
+    </script>
+    <!-- <script src="https://cdn.bootcss.com/angular.js/1.5.8/angular.js"></script>
+    <script src="http://cdn.bootcss.com/angular-resource/1.5.8/angular-resource.min.js"></script>
+    <script>
+       var app =  angular.module('app',['ngResource']);
+       app.controller('appCtrl',function($scope, $resource){
+
+           $scope.click = function() {
+               pars = $scope.user;
+               var $com = $resource('/carrots-admin-ajax/a/login/',{},{aaaa:{
+                   "method":"POST"
+               }});
+               $com.save(pars,{},function(res){
+                   console.log(res)
+               })
+           }
+       })
+    
+    </script> -->
 </body>
 
 </html>

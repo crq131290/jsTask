@@ -8,9 +8,20 @@
     <title>BookStore</title>
 </head>
 
-<body>
-    <div ng-view></div>
+<body ng-controller="ctrl">
+    <ul>
+        <li ng-repeat="x in list2 track by $index">{{x.name}}</li>
+    </ul>
+    <input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="hehe">
+    <div >
+        <p>
+            我我我我我我
+            我我我我我我
+        </p>
+    </div>
+    <video style="width: 400px;height: 400px;" src="test.mp4"  controls="controls">
 
+    </video>
 </body>
 <script src="./js/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.js"></script>

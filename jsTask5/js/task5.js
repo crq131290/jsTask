@@ -19,7 +19,7 @@ $('#login').on('click', function() {
                     console.log(text.code);
                     switch (text.code) {
                         case 0:
-                            window.location.href = "http://dev.admin.carrots.ptteng.com/#/dashboard";
+                            // window.location.href = "http://dev.admin.carrots.ptteng.com/#/dashboard";
                             break;
                         case -5003:
                             $(".tips").text("用户不存在")

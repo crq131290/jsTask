@@ -78,7 +78,9 @@
             <tbody>
                 <tr ng-repeat="a in userData | orderBy:'id'">
                     <td>{{a.id}}</td>
-                    <td>{{a.title}}</td>
+                    <td>
+                        <p >  {{a.title}}</p>   
+                    </td>
                     <td>{{a.type | filterTypes}}</td>
                     <td>
                         <div>{{a.createAt | date: "yyyy-MM-dd"}} </div>

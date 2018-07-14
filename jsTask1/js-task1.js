@@ -107,6 +107,7 @@ function xx(aaa) {
 ss(xx)
 
 //生成123//456//789的方法
+// 失败的写法
 for(let i=0;i<8;i=i+3){              
     let  b=i*500
       setTimeout(function(){ 
@@ -116,15 +117,15 @@ for(let i=0;i<8;i=i+3){
      },b)       
 }
 //生成123//456//789的方法2
-setInterval(xxx,1000)
+// 最合理的写法
+var x = setInterval(xxx,2000)
 var n=0;
 function xxx() {
     for(var i=0;i<3;i++) {
         console.log(n)
         n++
-        if(n>9) {
-            n=0
-            xxx()
+        if(n>=9) {
+            n=0       
         }
     }        
 }

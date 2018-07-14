@@ -35,4 +35,22 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "html/newListpage.html",
       controller: "newListpage"
     })
-});
+})
+myApp.run[('$rootScope', '$location',function ($rootScope,$location) {
+  //默认分页参数
+  $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+      console.log('路由变化开始')    
+  });
+
+  $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+    console.log('路由变化成功')
+  });
+
+  // $rootScope.$on('$viewContentLoading', function (event) {
+  //     console.log('视图开始加载');
+  // });
+  // $rootScope.$on('$viewContentLoaded', function (event) {
+  //     console.log('视图渲染完毕');
+  // });
+
+})];
