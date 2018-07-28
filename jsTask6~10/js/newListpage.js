@@ -33,6 +33,7 @@ angular.module("myApp")
                 // console.log($scope.article.type);
                 // console.log($scope.type);
                 console.log(response.data.data.article.img)
+                console.log($scope.imgUrl)
             };
         });
     } else {

@@ -46,6 +46,7 @@ angular
         $scope.pages = Math.ceil(
           response.data.data.total / response.data.data.size
         );
+        sessionStorage.setItem('all',$scope.pages )
         $scope.page = response.data.data.page;
         //
         // 此时显示未定义,因为pageid还没定义,所以$scope.page也就是未定义
@@ -91,7 +92,7 @@ angular
       $scope.pageList = pagelist;
     });
     console.log($scope.params.pageid);
-
+    // console.log($scope.pages)
     // 分页跳转页面
     $scope.selectpage = function(page) {
       if (page < 1) {
@@ -211,4 +212,22 @@ angular
           }       
       
     }
-  });
+    $scope.option = {
+      curr: $stateParams.pageid,  //当前页数
+      all: 10,  //总页数
+      count: 5,  //最多显示的页数，默认为10
+
+      //点击页数的回调函数，参数page为点击的页数
+      click: function (page) {
+          console.log(page);
+          //这里可以写跳转到某个页面等...
+          $state.go("home.listpages",{
+              pageid:page
+          })
+          console.log($stateParams)
+      }
+  }
+  })
+
+    
+
